@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../public/images/HPC2.jpg'); /* Updated path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
