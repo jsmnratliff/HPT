@@ -29,9 +29,7 @@ function Wizards() {
           <li key={index}>
             <h2>{wizard.name}</h2>
             <div className="wizard-details">
-              <p>
-                 {wizard.image}
-              </p>
+                <img src={wizard.image} alt={wizard.name} />
               <p>
                 <strong>House:</strong> {wizard.house}
               </p>
