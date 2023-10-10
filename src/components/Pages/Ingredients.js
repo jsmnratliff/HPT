@@ -4,11 +4,9 @@ function Ingredients() {
   const [ingredients, setIngredients] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API when the component mounts
-    fetch('https://wizard-world-api.herokuapp.com/Ingredients')
+    fetch('https://hp-api.onrender.com/api/spells')
       .then((response) => response.json())
       .then((data) => {
-        // Update the ingredients state with the fetched data
         setIngredients(data);
       })
       .catch((error) => {
@@ -23,8 +21,9 @@ function Ingredients() {
         {ingredients.map((ingredient) => (
           <li key={ingredient.id}>
             <h2>{ingredient.name}</h2>
-            <p>{ingredient.description}</p>
-            {/* Add more ingredient details as needed */}
+            <div className="ingredient-details">
+              <p><strong>Description:</strong> {ingredient.description}</p>
+            </div>
           </li>
         ))}
       </ul>

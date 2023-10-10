@@ -6,7 +6,6 @@ function HomePage() {
       <div>
         <h1>Harry Potter Homepage</h1>
         <p>Welcome to the Harry Potter world!</p>
-        <Link to="/App">Open</Link>
       </div>
     );
   }

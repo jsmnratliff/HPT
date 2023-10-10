@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../css/Wizard.css';
 
 function Wizards() {
   const [wizards, setWizards] = useState([]);
@@ -13,7 +14,6 @@ function Wizards() {
         return response.json();
       })
       .then((data) => {
-        // Update the wizards state with the fetched data
         setWizards(data);
       })
       .catch((error) => {

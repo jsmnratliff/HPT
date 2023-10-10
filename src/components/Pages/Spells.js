@@ -4,8 +4,7 @@ function Spells() {
   const [spells, setSpells] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API when the component mounts
-    fetch('https://wizard-world-api.herokuapp.com/Spells')
+    fetch('https://hp-api.onrender.com/api/spells')
       .then((response) => response.json())
       .then((data) => {
         // Update the spells state with the fetched data
@@ -20,11 +19,14 @@ function Spells() {
     <div>
       <h1>Spells</h1>
       <ul>
-        {spells.map((spell) => (
-          <li key={spell.id}>
-            <h2>{spell.name}</h2>
-            <p>{spell.description}</p>
-            {/* Add more spell details as needed */}
+        {spells.map((spells, index) => (
+          <li key={index}>
+            <h2>{spells.name}</h2>
+            <div className="spell-details">
+              <p>
+                <strong>Description:</strong> {spells.description}
+                </p>
+            </div>
           </li>
         ))}
       </ul>
