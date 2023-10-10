@@ -1,73 +1,33 @@
-import React, {useState} from 'react';
-import './App.css';
-import NavBar from './components/NavBar';
-
-const houseImages = {
-  Gryffindor: 'url_to_gryffindor_image.jpg',
-  Hufflepuff: 'url_to_hufflepuff_image.jpg',
-  Ravenclaw: 'url_to_ravenclaw_image.jpg',
-  Slytherin: 'url_to_slytherin_image.jpg',
-};
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+import NavBar from './components/NavBar/NavBar';
+import HomePage from './components/HomePage/HomePage';
+import Spells from './components/Pages/Spells';
+import Elixirs from './components/Pages/Elixirs';
+import Houses from './components/Pages/Houses';
+import Ingredients from './components/Pages/Ingredients';
+import Wizards from './components/Pages/Wizards';
 
 function App() {
-  const [selectedHouse, setSelectedHouse] = useState('');
-  const [enteredName, setEnteredName] = useState('');
-
-  const handleHouseSelect = (e) => {
-    setSelectedHouse(e.target.value);
-  };
-
-  const handleNameInput = (e) => {
-    setEnteredName(e.target.value);
-  };
-
   return (
-    <div className="App">
-      <NavBar />
-      <div className="container">
-        <h1>O.W.L. Trivia: Prove Your Harry Potter Mastery</h1>
-        
-        <div>
-          <label>Choose Your House:</label>
-          <select value={selectedHouse} onChange={handleHouseSelect}>
-            <option value="">Select a House</option>
-            <option value="Gryffindor">Gryffindor</option>
-            <option value="Hufflepuff">Hufflepuff</option>
-            <option value="Ravenclaw">Ravenclaw</option>
-            <option value="Slytherin">Slytherin</option>
-          </select>
-        </div>
-
-        <div>
-          <label>Enter Your Name:</label>
-          <input
-            type="text"
-            value={enteredName}
-            onChange={handleNameInput}
-            placeholder="Your Name"
-          />
-        </div>
-
-        {selectedHouse && enteredName && (
-          <div>
-            <p>Welcome, {enteredName} of {selectedHouse}!</p>
-            {/* Display the selected house image */}
-            {houseImages[selectedHouse] && (
-              <div>
-                <img
-                  src={houseImages[selectedHouse]}
-                  alt={`${selectedHouse} House`}
-                  width="100" // Adjust the size as needed
-                  height="100"
-                />
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Your game content goes here... */}
+    <Router> 
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/spells" element={<Spells />} />
+          <Route path="/elixirs" element={<Elixirs />} />
+          <Route path="/houses" element={<Houses />} />
+          <Route path="/ingredients" element={<Ingredients />} />
+          <Route path="/wizards" element={<Wizards />} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
