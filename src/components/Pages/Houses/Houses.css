@@ -1,7 +1,7 @@
 .houses-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
   background-image: url('../../images/oldBookPage.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,17 +11,20 @@
 .house-table {
   margin: 8px;
 }
-  .house-name {
-    font-size: 18px;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-    .house-table table {
-    width: 90%;
-    border-collapse: collapse;
-  }
-  .house-table table td {
-    text-align: center;
-    padding: 2px;
-    border-top: 2px solid #0f0000;
-  }
+
+.house-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center; 
+}
+
+.house-table table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.house-table table td {
+  text-align: center; /* Center the text inside table cells horizontally */
+  padding: 2px;
+  border-top: 2px solid #0f0000;
+}

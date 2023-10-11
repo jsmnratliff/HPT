@@ -22,12 +22,12 @@ function Wizards() {
 
   return (
     <div>
-      <h1>Wizards</h1>
-      <ul>
+      <h1 id="h1"> Wizards</h1>
+      <ul style={{listStyleType: 'none'}}>
         {wizards.map((wizard, index) => (
           <li key={index}>
-            <h2>{wizard.name}</h2>
             <div className="wizard-details">
+            <h2>{wizard.name}</h2>
                 <img src={wizard.image} alt={wizard.name} />
               <p>
                 <strong>House:</strong> {wizard.house}
@@ -41,12 +41,12 @@ function Wizards() {
               <p>
                 <strong>Patronus:</strong> {wizard.patronus}
               </p>
-              {wizard.wand && ( 
-                <p>
-                  <strong>Wand:</strong> {wizard.wand.wood}, {wizard.wand.core}, {wizard.wand.length}
-                </p>
-              )}
-            </div>
+                {wizard.wand && (
+              <p>
+                 <strong>Wand:</strong> {wizard.wand.wood}, {wizard.wand.core}, {wizard.wand.length}
+              </p>
+            )}
+          </div>
           </li>
         ))}
       </ul>
