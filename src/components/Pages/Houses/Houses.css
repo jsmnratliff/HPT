@@ -9,23 +9,19 @@
 }
 
 .house-table {
-  flex: 1; /* Let each house take up an equal portion of available space */
-  margin: 10px; /* Adjust margin as needed */
+  margin: 8px;
 }
-  
-  /* Style for the table headers (house names) */
-  .house-table h2 {
+  .house-name {
     font-size: 18px;
     margin-bottom: 5px;
+    text-align: center;
   }
-  
-  /* Style for the student names in each table */
-  .house-table table {
-    width: 100%;
+    .house-table table {
+    width: 90%;
     border-collapse: collapse;
   }
-  
   .house-table table td {
-    padding: 5px;
-    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 2px;
+    border-top: 2px solid #0f0000;
   }

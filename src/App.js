@@ -7,10 +7,9 @@ import {
 import NavBar from './components/NavBar/NavBar';
 import HomePage from './components/Pages/HomePage/HomePage';
 import Spells from './components/Pages/Spells';
-import Elixirs from './components/Pages/Elixirs';
 import Houses from './components/Pages/Houses/Houses';
 import Wizards from './components/Pages/Wizards/Wizards';
-
+import './App.css';
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/spells" element={<Spells />} />
-          <Route path="/elixirs" element={<Elixirs />} />
           <Route path="/houses" element={<Houses />} />
           <Route path="/wizards" element={<Wizards />} />
         </Routes>

@@ -1,6 +1,0 @@
-body {
-    background-image: url('../components/HPC2.jpg'); /* Specify the path to your image */
-    background-size: cover; /* Adjust the size as needed */
-    background-repeat: no-repeat; /* Prevent image tiling */
-    background-attachment: fixed; /* Fix the background when scrolling */
-}
