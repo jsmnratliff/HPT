@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../css/Houses.css'; 
+import './Houses.css';
 
 function Houses() {
   const [slytherinStudents, setSlytherinStudents] = useState([]);
@@ -48,9 +48,11 @@ function Houses() {
   return (
     <div className="houses-container">
       <h1>Houses</h1>
-
       <div className="house-table">
-        <h2>Hufflepuff</h2>
+        <div className="house-info">
+          <h2>Hufflepuff</h2>
+          <img src="/HouseImages/Hufflepuff.png" alt="Hufflepuff Icon" style={{ width: '150px', height: '90px' }} />
+        </div>
         <table>
           <tbody>
             {hufflepuffStudents.map((student, index) => (
@@ -64,6 +66,7 @@ function Houses() {
 
       <div className="house-table">
         <h2>Gryffindor</h2>
+        <img src="/HouseImages/Gryffindor.png" alt="Gryffindor Icon" style={{ width: '150px', height: '90px' }} />
         <table>
           <tbody>
             {gryffindorStudents.map((student, index) => (
@@ -77,6 +80,7 @@ function Houses() {
 
       <div className="house-table">
         <h2>Ravenclaw</h2>
+        <img src="/HouseImages/Ravenclaw.png" alt="Ravenclaw Icon" style={{ width: '150px', height: '90px' }} />
         <table>
           <tbody>
             {ravenclawStudents.map((student, index) => (
@@ -90,6 +94,7 @@ function Houses() {
 
       <div className="house-table">
         <h2>Slytherin</h2>
+        <img src="/HouseImages/Slytherin.png" alt="Slytherin Icon" style={{ width: '150px', height: '90px' }} />
         <table>
           <tbody>
             {slytherinStudents.map((student, index) => (

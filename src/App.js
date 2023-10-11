@@ -5,11 +5,12 @@ import {
   Route,
 } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
-import HomePage from './components/HomePage/HomePage';
+import HomePage from './components/Pages/HomePage/HomePage';
 import Spells from './components/Pages/Spells';
 import Elixirs from './components/Pages/Elixirs';
-import Houses from './components/Pages/Houses';
-import Wizards from './components/Pages/Wizards';
+import Houses from './components/Pages/Houses/Houses';
+import Wizards from './components/Pages/Wizards/Wizards';
+
 
 function App() {
   return (

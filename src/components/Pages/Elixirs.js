@@ -4,22 +4,17 @@ function Elixirs() {
   const [elixirs, setElixirs] = useState([]);
 
   useEffect(() => {
-    // Fetch elixirs data from the API when the component mounts
     fetch('https://wizard-world-api.herokuapp.com/Elixirs')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
+        console.log('Data:', data); // Log data to the console
         setElixirs(data);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
   }, []);
-
+  
   return (
     <div>
       <h1>Elixirs</h1>

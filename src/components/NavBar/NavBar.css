@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b11616; 
+  color: #ffe816; 
+  padding: 8px 25px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 1px; 
+  padding: 8px;
+}
+
+.nav-links li {
+  padding: 6px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit; 
+  margin-right: 30px;
+}
+

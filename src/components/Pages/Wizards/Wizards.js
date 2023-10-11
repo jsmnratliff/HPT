@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../css/Wizard.css';
+import '../Wizards/Wizard.css';
 
 function Wizards() {
   const [wizards, setWizards] = useState([]);

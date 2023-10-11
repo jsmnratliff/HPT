@@ -1,0 +1,31 @@
+.houses-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url('../../images/oldBookPage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.house-table {
+  flex: 1; /* Let each house take up an equal portion of available space */
+  margin: 10px; /* Adjust margin as needed */
+}
+  
+  /* Style for the table headers (house names) */
+  .house-table h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for the student names in each table */
+  .house-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .house-table table td {
+    padding: 5px;
+    border-top: 1px solid #ddd;
+  }
