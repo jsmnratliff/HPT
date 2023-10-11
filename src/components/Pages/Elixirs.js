@@ -4,8 +4,14 @@ function Elixirs() {
   const [elixirs, setElixirs] = useState([]);
 
   useEffect(() => {
-    fetch('https://potterdb.com/potions?q=')
-      .then((response) => response.json())
+    // Fetch elixirs data from the API when the component mounts
+    fetch('https://wizard-world-api.herokuapp.com/Elixirs')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((data) => {
         setElixirs(data);
       })
@@ -18,32 +24,14 @@ function Elixirs() {
     <div>
       <h1>Elixirs</h1>
       <ul>
-  {elixirs.map((elixir, index) => (
-    <li key={index}>
-      <h2>{elixir.name}</h2>
-      <div className="elixir-details">
-        <p>
-            <strong>Name:</strong> {elixir.name}
-        </p>
-        <p>
-            <strong>Description:</strong> {elixir.description}
-        </p>
-        <p>
-            <strong>Effects:</strong> {elixir.effects}
-        </p>
-        <p>
-            <strong>Side Effects:</strong> {elixir.side_effects}
-        </p>
-        <p>
-            <strong>Ingredients:</strong> {elixir.ingredients}
-        </p>
-        <p>
-            <strong>Difficulty:</strong> {elixir.difficulty}
-        </p>
-      </div>
-    </li>
-  ))}
-</ul>
+        {elixirs.map((elixir) => (
+          <li key={elixir.id}>
+            <h2>{elixir.name}</h2>
+            <p><strong>Effects:</strong> {elixir.effect}</p>
+            <p><strong>Side Effects:</strong> {elixir.sideEffects || 'None'}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

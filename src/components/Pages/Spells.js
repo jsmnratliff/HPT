@@ -7,7 +7,6 @@ function Spells() {
     fetch('https://hp-api.onrender.com/api/spells')
       .then((response) => response.json())
       .then((data) => {
-        // Update the spells state with the fetched data
         setSpells(data);
       })
       .catch((error) => {

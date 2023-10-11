@@ -5,7 +5,6 @@ function Wizards() {
   const [wizards, setWizards] = useState([]);
  
   useEffect(() => {
-    // Fetch data from the API when the component mounts
     fetch('https://hp-api.onrender.com/api/characters')
       .then((response) => {
         if (!response.ok) {
@@ -42,7 +41,7 @@ function Wizards() {
               <p>
                 <strong>Patronus:</strong> {wizard.patronus}
               </p>
-              {wizard.wand && ( // Check if wand object exists
+              {wizard.wand && ( 
                 <p>
                   <strong>Wand:</strong> {wizard.wand.wood}, {wizard.wand.core}, {wizard.wand.length}
                 </p>
