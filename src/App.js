@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import NavBar from './components/NavBar/NavBar';
 import HomePage from './components/Pages/HomePage/HomePage';
-import Spells from './components/Pages/Spells';
+import Spells from './components/Pages/Spells/Spells';
 import Houses from './components/Pages/Houses/Houses';
 import Wizards from './components/Pages/Wizards/Wizards';
 import './App.css';
