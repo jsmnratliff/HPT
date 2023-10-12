@@ -1,0 +1,7 @@
+.spells-container {
+    background-image: url('../../images/oldBookPage.jpg');
+    background-size: 150% 150%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px;
+  }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SpellFilter from './SpellFilter'; // Adjust the import path as needed
+import SpellFilter from './SpellFilter'; 
+import './Spells.css';
 
 function Spells() {
   const [spells, setSpells] = useState([]);
@@ -18,14 +19,12 @@ function Spells() {
   }, []);
 
   useEffect(() => {
-    // Filter the spells based on the selected letter
     if (selectedLetter) {
       const filtered = spells.filter((spell) =>
         spell.name.startsWith(selectedLetter)
       );
       setFilteredSpells(filtered);
     } else {
-      // If no letter is selected, show all spells
       setFilteredSpells(spells);
     }
   }, [selectedLetter, spells]);
@@ -38,7 +37,7 @@ function Spells() {
     <div>
       <h1>Spells</h1>
       <SpellFilter onFilterChange={handleFilterChange} />
-      <ul>
+      <ul className='spells-container'> 
         {filteredSpells.map((spell, index) => (
           <li key={index}>
             <h2>{spell.name}</h2>

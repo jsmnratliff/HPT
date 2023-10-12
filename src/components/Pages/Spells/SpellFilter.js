@@ -3,16 +3,17 @@ import './SpellFilter.css';
 
 // SpellFilter component
 function SpellFilter({ onFilterChange }) {
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').filter((letter) => !['J', 'K', 'Q', 'V', 'X', 'Y', 'Z'].includes(letter));
 
   return (
     <div className='filter'>
-      <p>Filter Spells by First Letter:</p>
+      <div className="alphabet-buttons-container">
       {alphabet.map((letter) => (
         <button key={letter} className="alphabet-button" onClick={() => onFilterChange(letter)}>
            {letter}
         </button>
       ))}
+      </div>
     </div>
   );
 }
