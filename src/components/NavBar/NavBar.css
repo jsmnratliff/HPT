@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: #b11616; 
-  color: #ffe816; 
+  color: rgb(255, 232, 22); 
   padding: 8px 25px;
 }
 
@@ -22,5 +22,11 @@
   text-decoration: none;
   color: inherit; 
   margin-right: 30px;
+}
+.nav-links:hover {
+    background: #f03413;
+  border: #cf3131;
+  border-radius: 100px;
+  background: url(https://66.media.tumblr.com/efbcb171b363c470afeb3c1eb05e66ba/tumblr_mk8bztYvUR1qeyqcno1_400.gifv);
 }
 

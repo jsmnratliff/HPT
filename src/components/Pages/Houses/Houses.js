@@ -46,13 +46,15 @@ function Houses() {
   }, []);
 
   return (
+    <div>
+    <h1 id='h1'>Houses</h1>
     <div className="houses-container">
-      <h1>Houses</h1>
       <div className="house-table">
         <div className="house-info">
         <h2 className="house-name">Hufflepuff</h2>
           <img src="/HouseImages/Hufflepuff.png" alt="Hufflepuff Icon" style={{ width: '150px', height: '90px' }} />        </div>
-          <table>
+          </div>
+            <table>
           <tbody>
             {hufflepuffStudents.map((student, index) => (
               <tr key={index}>
