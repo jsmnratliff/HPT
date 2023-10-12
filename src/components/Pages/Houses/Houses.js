@@ -47,64 +47,65 @@ function Houses() {
 
   return (
     <div>
-    <h1 id='h1'>Houses</h1>
-    <div className="houses-container">
-      <div className="house-table">
-        <div className="house-info">
-        <h2 className="house-name">Hufflepuff</h2>
-          <img src="/HouseImages/Hufflepuff.png" alt="Hufflepuff Icon" style={{ width: '150px', height: '90px' }} />        </div>
+      <h1 id='h1'>Houses</h1>
+      <div className="houses-container">
+        <div className="house-table">
+          <div className="house-info">
+            <h2 className="house-name">Hufflepuff</h2>
+            <img src="/HouseImages/Hufflepuff.png" alt="Hufflepuff Icon" style={{ width: '150px', height: '90px' }} />
           </div>
-            <table>
-          <tbody>
-            {hufflepuffStudents.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          <table>
+            <tbody id='boarder'>
+              {hufflepuffStudents.map((student, index) => (
+                <tr key={index}>
+                  <td>{student.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <div className="house-table">
-      <h2 className="house-name">Gryffindor</h2>
-        <img src="/HouseImages/Gryffindor.png" alt="Gryffindor Icon" style={{ width: '150px', height: '90px' }} />
-        <table>
-          <tbody>
-            {gryffindorStudents.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        <div className="house-table">
+          <h2 className="house-name">Gryffindor</h2>
+          <img src="/HouseImages/Gryffindor.png" alt="Gryffindor Icon" style={{ width: '150px', height: '90px' }} />
+          <table>
+            <tbody>
+              {gryffindorStudents.map((student, index) => (
+                <tr key={index}>
+                  <td>{student.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <div className="house-table">
-      <h2 className="house-name">Ravenclaw</h2>
-        <img src="/HouseImages/Ravenclaw.png" alt="Ravenclaw Icon" style={{ width: '150px', height: '90px' }} />
-        <table>
-          <tbody>
-            {ravenclawStudents.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        <div className="house-table">
+          <h2 className="house-name">Ravenclaw</h2>
+          <img src="/HouseImages/Ravenclaw.png" alt="Ravenclaw Icon" style={{ width: '150px', height: '90px' }} />
+          <table>
+            <tbody>
+              {ravenclawStudents.map((student, index) => (
+                <tr key={index}>
+                  <td>{student.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
-      <div className="house-table">
-      <h2 className="house-name">Slytherin</h2>
-        <img src="/HouseImages/Slytherin.png" alt="Slytherin Icon" style={{ width: '150px', height: '90px' }} />
-        <table>
-          <tbody>
-            {slytherinStudents.map((student, index) => (
-              <tr key={index}>
-                <td>{student.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="house-table">
+          <h2 className="house-name">Slytherin</h2>
+          <img src="/HouseImages/Slytherin.png" alt="Slytherin Icon" style={{ width: '150px', height: '90px' }} />
+          <table>
+            <tbody>
+              {slytherinStudents.map((student, index) => (
+                <tr key={index}>
+                  <td>{student.name}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
