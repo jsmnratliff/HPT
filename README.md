@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Visit the Website
+
+If you'd like to check out the website, you can visit it at the following URL:
+
+[Harry Potter Obsessed Website](https://harrypotterobsessed.onrender.com/)
 
 ## Available Scripts
 
