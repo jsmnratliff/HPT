@@ -1,7 +1,6 @@
-.spells-container {
+.background-image {
     background-image: url('../../images/oldBookPage.jpg');
-    background-size: 150% 150%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
-    padding: 20px;
+    background-attachment: fixed;
   }
