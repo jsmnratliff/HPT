@@ -1,7 +1,32 @@
 import React, { useState } from 'react';
+import './HomePage.css';
 
 function HomePage() {
   const [selectedOption, setSelectedOption] = useState(null);
+
+  return (
+    <div className="quiz background-image">
+      {quizData.map((questionData, questionIndex) => (
+        <div key={questionIndex}>
+          <h3>{questionData.question}</h3>
+          {questionData.answers.map((answer, answerIndex) => (
+            <div key={answerIndex}>
+              <label>
+                <input
+                  type="radio"
+                  name={`question-${questionIndex}`}
+                  value={answerIndex}
+                  onChange={() => handleOptionSelect(questionIndex, answerIndex)}
+                />
+                {answer}
+              </label>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
 
   const quizData = [
     {
@@ -194,30 +219,5 @@ function HomePage() {
 
 
   };
-
-
-  return (
-    <div className="quiz">
-      {quizData.map((questionData, questionIndex) => (
-        <div key={questionIndex}>
-          <h3>{questionData.question}</h3>
-          {questionData.answers.map((answer, answerIndex) => (
-            <div key={answerIndex}>
-              <label>
-                <input
-                  type="radio"
-                  name={`question-${questionIndex}`}
-                  value={answerIndex}
-                  onChange={() => handleOptionSelect(questionIndex, answerIndex)}
-                />
-                {answer}
-              </label>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export default HomePage;
